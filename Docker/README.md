@@ -20,7 +20,8 @@ For installing docker with GPU acceleration, Nvidia came up with NGC Docker with
 
 Architecture:
 - Here is an image to give the brief overview of the architecture
-![NGC](Assets/cuda-wsl.png)
+
+![nvidia-gpu-docker](Assets/cuda-wsl.png)
 
 Pre-Installation:
 - Proceed over to Section 2.7 Running CUDA Containers of the CUDA WSL Documentation.
