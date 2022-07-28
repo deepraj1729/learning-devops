@@ -1,3 +1,4 @@
+![Jenkins](Assets/jenkins.png)
 # Install Jenkins the easy way
 Install Jenkins the easy way with docker
 
