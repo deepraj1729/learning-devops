@@ -7,4 +7,4 @@ include:
   - README.md
   - LICENSE
 
-theme: jekyll-theme-tactile
+theme: jekyll-theme-slate
