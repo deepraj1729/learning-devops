@@ -20,62 +20,62 @@ Install the python wrapper for ngrok using pip:
 In server.py, where our FastAPI app is initialized, we should add a variable that let’s us configure from an environment variable whether we want to tunnel to localhost with ngrok. We can initialize the pyngrok tunnel in this same place.
 
         ```python
-        import os
-        import sys
+            import os
+            import sys
 
-        from fastapi import FastAPI
-        from fastapi.logger import logger
-        from pydantic import BaseSettings
-
-
-        class Settings(BaseSettings):
-            # ... The rest of our FastAPI settings
-
-            BASE_URL = "http://localhost:8000"
-            USE_NGROK = os.environ.get("USE_NGROK", "False") == "True"
+            from fastapi import FastAPI
+            from fastapi.logger import logger
+            from pydantic import BaseSettings
 
 
-        settings = Settings()
+            class Settings(BaseSettings):
+                # ... The rest of our FastAPI settings
+
+                BASE_URL = "http://localhost:8000"
+                USE_NGROK = os.environ.get("USE_NGROK", "False") == "True"
 
 
-        def init_webhooks(base_url):
-            # Update inbound traffic via APIs to use the public-facing ngrok URL
-            pass
+            settings = Settings()
 
 
-        # Initialize the FastAPI app for a simple web server
-        app = FastAPI()
+            def init_webhooks(base_url):
+                # Update inbound traffic via APIs to use the public-facing ngrok URL
+                pass
 
-        if settings.USE_NGROK:
-            # pyngrok should only ever be installed or initialized in a dev environment when this flag is set
-            from pyngrok import ngrok
 
-            # Get the dev server port (defaults to 8000 for Uvicorn, can be overridden with `--port`
-            # when starting the server
-            port = sys.argv[sys.argv.index("--port") + 1] if "--port" in sys.argv else 8000
+            # Initialize the FastAPI app for a simple web server
+            app = FastAPI()
 
-            # Open a ngrok tunnel to the dev server
-            public_url = ngrok.connect(port).public_url
-            logger.info("ngrok tunnel \"{}\" -> \"http://127.0.0.1:{}\"".format(public_url, port))
+            if settings.USE_NGROK:
+                # pyngrok should only ever be installed or initialized in a dev environment when this flag is set
+                from pyngrok import ngrok
 
-            # Update any base URLs or webhooks to use the public ngrok URL
-            settings.BASE_URL = public_url
-            init_webhooks(public_url)
+                # Get the dev server port (defaults to 8000 for Uvicorn, can be overridden with `--port`
+                # when starting the server
+                port = sys.argv[sys.argv.index("--port") + 1] if "--port" in sys.argv else 8000
 
-        # ... Initialize routers and the rest of our app
+                # Open a ngrok tunnel to the dev server
+                public_url = ngrok.connect(port).public_url
+                logger.info("ngrok tunnel \"{}\" -> \"http://127.0.0.1:{}\"".format(public_url, port))
+
+                # Update any base URLs or webhooks to use the public ngrok URL
+                settings.BASE_URL = public_url
+                init_webhooks(public_url)
+
+            # ... Initialize routers and the rest of our app
         ```
 
-    Now FastAPI can be started by the usual means, with Uvicorn, setting USE_NGROK to open a tunnel.
+Now FastAPI can be started by the usual means, with Uvicorn, setting USE_NGROK to open a tunnel.
 
-        USE_NGROK=True uvicorn server:app
+    USE_NGROK=True uvicorn server:app
 
 
-    ## End-to-End Testing:
-    Some testing use-cases might mean we want to temporarily expose a route via a pyngrok tunnel to fully validate a workflow. For example, an internal end-to-end tester, a step in a pre-deployment validation pipeline, or a service that automatically updates a status page.
+## End-to-End Testing:
+Some testing use-cases might mean we want to temporarily expose a route via a pyngrok tunnel to fully validate a workflow. For example, an internal end-to-end tester, a step in a pre-deployment validation pipeline, or a service that automatically updates a status page.
 
-    Whatever the case may be, extending unittest.TestCase and adding our own fixtures that start the dev server and open a pyngrok tunnel is relatively simple. This snippet builds on the Flask example above, but it could be easily modified to work with Django or another framework if its dev server was started/stopped in the start_dev_server() and stop_dev_server() methods and PORT was changed.
+Whatever the case may be, extending unittest.TestCase and adding our own fixtures that start the dev server and open a pyngrok tunnel is relatively simple. This snippet builds on the Flask example above, but it could be easily modified to work with Django or another framework if its dev server was started/stopped in the start_dev_server() and stop_dev_server() methods and PORT was changed.
 
-            ```python
+        ```python
             import unittest
             import threading
 
@@ -132,7 +132,7 @@ In server.py, where our FastAPI app is initialized, we should add a variable tha
                 @classmethod
                 def tearDownClass(cls):
                     cls.stop_dev_server()
-            ```
+        ```
 ## References:
 - [Getting started with Ngrok](https://ngrok.com/docs/getting-started)
 - [pyngrok Documentation](https://pyngrok.readthedocs.io/en/latest/integrations.html#fastapi)
