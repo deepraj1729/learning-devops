@@ -1,3 +1,5 @@
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 # learning-devops
 An all-in-one repo exploring concepts of DevOps
 
