@@ -19,6 +19,7 @@ Install the python wrapper for ngrok using pip:
 
 In server.py, where our FastAPI app is initialized, we should add a variable that let’s us configure from an environment variable whether we want to tunnel to localhost with ngrok. We can initialize the pyngrok tunnel in this same place.
 
+    ```python
     import os
     import sys
 
@@ -62,6 +63,7 @@ In server.py, where our FastAPI app is initialized, we should add a variable tha
         init_webhooks(public_url)
 
     # ... Initialize routers and the rest of our app
+    ```
 
 Now FastAPI can be started by the usual means, with Uvicorn, setting USE_NGROK to open a tunnel.
 
@@ -73,7 +75,7 @@ Some testing use-cases might mean we want to temporarily expose a route via a py
 
 Whatever the case may be, extending unittest.TestCase and adding our own fixtures that start the dev server and open a pyngrok tunnel is relatively simple. This snippet builds on the Flask example above, but it could be easily modified to work with Django or another framework if its dev server was started/stopped in the start_dev_server() and stop_dev_server() methods and PORT was changed.
 
-
+    ```python
     import unittest
     import threading
 
@@ -130,7 +132,7 @@ Whatever the case may be, extending unittest.TestCase and adding our own fixture
         @classmethod
         def tearDownClass(cls):
             cls.stop_dev_server()
-
+    ```
 ## References:
 - [Getting started with Ngrok](https://ngrok.com/docs/getting-started)
 - [pyngrok Documentation](https://pyngrok.readthedocs.io/en/latest/integrations.html#fastapi)
