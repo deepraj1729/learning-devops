@@ -2,16 +2,20 @@
 An all-in-one repo exploring concepts of DevOps
 
 <p align="center">
-  <img src="Assets/devops.png" />
+  <img src="devops.png" />
 </p>
 
-## Complete guide to learn Devops:
-The complete roadmap to learn devops in 2022 is given below:
+## Contents:
+1. Roadmap: [Complete Roadmap to learn devops](Blogs/Roadmap.md)
+2. Blogs:
+  - [Webhooks-vs-APIs](Blogs/Webhooks-vs-API.md)
+  - [APIs-vs-Webhooks-vs-Websockets](Blogs/APIs-vs-Webhook-vs-Websocket.md)
+  - [Ngrok-with-implementation](Blogs/NGROK.md)
+  - [Nexus Repository](Blogs/Nexus-Repository.md)
 
-![Devops-roadmap](Assets/devops-roadmap.png)
-
-
-
+3. Tools:
+  - [Docker](Docker/README.md)
+  - [Jenkins](Jenkins/README.md)
 
 ## References:
 - `https://roadmap.sh/devops` by [@kamranahmedse](https://github.com/kamranahmedse)
