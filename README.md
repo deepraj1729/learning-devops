@@ -66,18 +66,19 @@ An all-in-one repo exploring concepts of DevOps
 	- Configuraton Management (Ansible,Chef,Salt,Puppet)
 	- Container Orchestration (Kubernetes,Mesos,Docker Swarm,Nomad)
 	- Infrastructure Provisioning (Terraform,AWS CDK,CloudFormation,Pulumi)
-	- Learn some CI/CD tools:
-		- Gitlab CI
-		- Jenkins
-		- Github Actions
-		- Circle CI
-		- Bitbucket CI
-		- Travis CI
-		- Azure DevOps Services
-		- TeamCity
-		- Bamboo
 
-7. Infrastructure Monitoring:
+7. Learn some CI/CD tools:
+	- Gitlab CI
+	- Jenkins
+	- Github Actions
+	- Circle CI
+	- Bitbucket CI
+	- Travis CI
+	- Azure DevOps Services
+	- TeamCity
+	- Bamboo
+
+8. Infrastructure Monitoring:
 	- Prometheus
 	- Grafana
 	- Datadog
@@ -85,14 +86,14 @@ An all-in-one repo exploring concepts of DevOps
 	- Zabbix
 	- Monit
 
-8. Application Monitoring:
+9. Application Monitoring:
 	- Jaeger
 	- New Relic
 	- AppDynamics
 	- Instana
 	- OpenTelemetry
 
-9. Logs Management:
+10. Logs Management:
 	- Elastic Stack
 	- Graylog
 	- Splunk
@@ -100,7 +101,7 @@ An all-in-one repo exploring concepts of DevOps
 	- Loki
 
 
-10. Cloud Providers:
+11. Cloud Providers:
 	- AWS
 	- Google Cloud Platform
 	- Digital Ocean
@@ -111,7 +112,7 @@ An all-in-one repo exploring concepts of DevOps
 	- Alibaba Cloud
 
 
-11. Cloud Design Patterns:
+12. Cloud Design Patterns:
 	- Availability
 	- Data Management
 	- Design and Implementation
