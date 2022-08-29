@@ -7,8 +7,118 @@ An all-in-one repo exploring concepts of DevOps
   <img src="devops.png" />
 </p>
 
+## DevOps Roadmap
+
+1. Learn a programming language:
+	- Python
+	- NodeJS
+	- GoLang
+
+2. Understanding OS Concepts:
+	- I/O Management
+	- Virtualization
+	- Memory/Storage
+	- File Systems
+	- Sockets
+	- Processes
+	- Startup Management (initd)
+	- Service Management (systemd)
+	- Threads and Concurrency
+
+3. Learn about managing servers:
+	- Intro to System Admin
+  
+	- OS:
+		- Linux Distros (Ubuntu,CentOS,RHEL,Debian,Fedora,SUSE)
+		- Unix (FreeBSD,OpenBSD,NetBSD)
+
+	- Terminal:
+		- terminal multiplexers (tmux)
+		- Process monitoring (ps,top,htop,atop,lsof)
+		- System Performance (nmon,iostat,sar,vmstat)
+		- Network tools (traceroute,mtr,ping,nmap,netstat,airmon,ufw,tcpdump,airodump,iptables,dig,scp)
+		- bash scripting
+		- Vim/Nano/Powershell/Emacs
+		- Compiling apps from source (gcc,make)
+		- Text Manipulation (awk,sed,grep,sort,cut,uniq,cat,echo,fmt,tr,ni,wc,egrep,fgrep)
+		- Others (strace,dtrace,systemtap,uname,df,history,du)
+
+4. Networking, Security and Protocols:
+	- OSI Models
+	- White/Grey Listing
+	- DNS
+	- Emails (SMTP,IMAPS,POP3S) | DMARC, SPF, Domain Keys
+	- HTTP,HTTPS,FTP,SSL/TLS,SSH,Port Forwarding
+
+
+5. What is and how to setup a _______ ?
+	- Reverse Proxy
+	- Forward Proxy
+	- Firewall
+	- Caching Server
+	- Load Balancer
+	- Web Server (Apache,Caddy,Tomcat,IIS)
+
+
+6. Infrastructure as Code (IaC) Concepts:
+	- Service Mesh (Consul,Istio,Envoy,Linkerd)
+	- Conainers (Docker,LXC)
+	- Configuraton Management (Ansible,Chef,Salt,Puppet)
+	- Container Orchestration (Kubernetes,Mesos,Docker Swarm,Nomad)
+	- Infrastructure Provisioning (Terraform,AWS CDK,CloudFormation,Pulumi)
+	- Learn some CI/CD tools:
+		- Gitlab CI
+		- Jenkins
+		- Github Actions
+		- Circle CI
+		- Bitbucket CI
+		- Travis CI
+		- Azure DevOps Services
+		- TeamCity
+		- Bamboo
+
+7. Infrastructure Monitoring:
+	- Prometheus
+	- Grafana
+	- Datadog
+	- Nagios
+	- Zabbix
+	- Monit
+
+8. Application Monitoring:
+	- Jaeger
+	- New Relic
+	- AppDynamics
+	- Instana
+	- OpenTelemetry
+
+9. Logs Management:
+	- Elastic Stack
+	- Graylog
+	- Splunk
+	- Papertrail
+	- Loki
+
+
+10. Cloud Providers:
+	- AWS
+	- Google Cloud Platform
+	- Digital Ocean
+	- Azure
+	- Linode
+	- Heroku
+	- Vultr
+	- Alibaba Cloud
+
+
+11. Cloud Design Patterns:
+	- Availability
+	- Data Management
+	- Design and Implementation
+	- Management & Monitoring
+
+
 ## Contents:
-1. Roadmap: [Complete Roadmap to learn devops](Blogs/Roadmap.md)
 2. Blogs:
     - [Webhooks-vs-APIs](Blogs/Webhooks-vs-API.md)
     - [APIs-vs-Webhooks-vs-Websockets](Blogs/APIs-vs-Webhook-vs-Websocket.md)
