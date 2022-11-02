@@ -91,7 +91,7 @@ If you want only to download dependencies from Nexus, put this in the pom.xml:
             <repositories>
                 <repository>
                 <id>maven-group</id>
-                <url>https://nexus.lifesight.io/repository/ls-maven-group/</url>
+                <url>https://nexus.organization-url/repository/ls-maven-group/</url>
                 </repository>
             </repositories>
         </project>
